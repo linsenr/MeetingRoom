@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import { COLORS } from "../../values/colors";
+import React from "react";
 
 export type LoginCardProps = {
   onLoginClicked?: () => void;

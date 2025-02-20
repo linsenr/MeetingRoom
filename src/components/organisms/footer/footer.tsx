@@ -3,6 +3,7 @@ import APPCONSTANTS from "../../../values/appconsts";
 import { Box, Typography } from "@mui/material";
 import { memo } from "react";
 import moment from "moment";
+import React from "react";
 
 export type FooterProps = {
   lastRevisionDate?: string;

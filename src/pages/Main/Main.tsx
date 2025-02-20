@@ -7,7 +7,6 @@ import Menu from "../../components/organisms/menu/menu";
 import { Feature } from "../../enums/features";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import SRSRouter from "../../components/SRSRouter";
 import { RouteMappings } from "../../values/routemappings";
 import APPCONSTANTS from "../../values/appconsts";
 
@@ -40,7 +39,7 @@ const Main = () => {
         >
           <BreadCrumbsNavigator />
           <Box sx={{ flexGrow: 1, overflowY: "auto" }}>
-            <SRSRouter />
+            {/* <SRSRouter /> */}
           </Box>
         </Box>
       </Box>

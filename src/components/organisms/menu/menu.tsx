@@ -18,7 +18,6 @@ import { ReportSubMenuItem } from "../../../values/report_submenu";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import UICONSTANTS from "../../../values/uiconsts";
-import { LoggedInUserContext } from "../../../contexts/LoggedInUserContext";
 import { StylingConsts } from "../../../values/styling.consts";
 import Routes from "../../../values/routeconsts";
 import { RouteMappings } from "../../../values/routemappings";
@@ -100,8 +99,8 @@ const MoreStyleDrawer = styled(StyledDrawer)`
 
 const Menu = (props: MenuProps) => {
   //context
-  const { CurrentMenuItems, CurrentReportsItems, CurrentSystemItems } =
-    useContext(LoggedInUserContext);
+  // const { CurrentMenuItems, CurrentReportsItems, CurrentSystemItems } =
+  //   useContext(LoggedInUserContext);
 
   //hooks
   const navigate = useNavigate();
@@ -151,7 +150,7 @@ const Menu = (props: MenuProps) => {
           }}
         />
         <Divider />
-        {CurrentMenuItems.map((itm, idx, { length }) => {
+        {/* {CurrentMenuItems.map((itm, idx, { length }) => {
           return (
             <React.Fragment key={`feat-menu-frag-${idx}`}>
               {itm.itemKey === Feature.CommonHome ? (
@@ -281,7 +280,7 @@ const Menu = (props: MenuProps) => {
               {idx !== length - 1 ? <Divider /> : <></>}
             </React.Fragment>
           );
-        })}
+        })} */}
         <Divider />
         {/* <MenuItem
             display={UICONSTANTS.menuitem_signout}

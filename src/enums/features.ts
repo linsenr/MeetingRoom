@@ -1,4 +1,9 @@
 export enum Feature {
-    CommonHome
+    CommonHome,
+    GrandIncreamentReport,
+    PostingReport,
+    SeniorityRatingReport,
+    OverallPerformance,
+    DPAccDeletionList
   }
   

@@ -1,5 +1,6 @@
-import { Feature } from "../../enums/features";
-import { MenuItemVM } from "../../types/viewmodels/menuitemvm.type";
+import React from "react";
+import { Feature } from "../enums/features";
+import { MenuItemVM } from "../types/viewmodels/menuitemvm.type";
 
 export const ReportSubMenuItem: MenuItemVM[] = [
   {

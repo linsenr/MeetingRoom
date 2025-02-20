@@ -1,6 +1,7 @@
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import { memo } from "react";
+import { JSX, memo } from "react";
 import { Feature } from "../../../enums/features";
+import React from "react";
 
 export type MenuItemProps = {
   display: string;
