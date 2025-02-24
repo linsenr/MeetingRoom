@@ -1,29 +1,27 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Error from "./pages/Error/Error";
-import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Main from "./pages/Main/Main";
-import "./App.css";
+import UserManagement from "./pages/UserManagement/UserManagement";
+import RoomManagement from "./pages/RoomManagement/RoomManagement";
+import BookingManagement from "./pages/BookingManagement/BookingManagement";
+import BookingManage from "./pages/BookingManage/BookingManage";
 
-function App() {
+const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Routes>
-        <Route path="/error" element={<Error />} />
-        <Route path="/errorPage" element={<ErrorPage />} />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/*"
-          element={
-            //<RequireAuth>
-            <Main />
-            //</RequireAuth>
-          }
-        />
+        <Route path="/" element={<Main />}>
+          <Route path="user-management" element={<UserManagement />} />
+          <Route path="room-management" element={<RoomManagement />} />
+          <Route path="meeting-booking" element={<BookingManagement />} />
+          <Route path="booking-manage" element={<BookingManage />} />
+          <Route index element={<Navigate to="/user-management" replace />} />
+        </Route>
       </Routes>
-    </>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
